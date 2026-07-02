@@ -2,8 +2,8 @@
 
  import java.util.Scanner;
  import com.forgelabs.features.AgendaTreino;
-import com.forgelabs.features.Dieta;
-import com.forgelabs.features.Menu;
+ import com.forgelabs.features.Dieta;
+ import com.forgelabs.features.Menu;
 
  public class Main {
      public static void main(String[] args) {
