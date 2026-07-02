@@ -28,6 +28,7 @@
       idade = sc.nextLine();
 
      System.out.println("Qual seu peso?");
+      System.out.print("R: ");
       peso = sc.nextLine(); 
      
      }
