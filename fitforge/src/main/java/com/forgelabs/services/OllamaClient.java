@@ -6,15 +6,17 @@
  import java.net.http.HttpResponse;
  import java.util.ArrayList;
  import com.forgelabs.features.AgendaTreino;
+ import com.forgelabs.features.Dieta;
  import com.google.gson.Gson;
  import com.google.gson.JsonObject;
 
  public class OllamaClient {
 
  AgendaTreino listaDias = new AgendaTreino();   
+ Dieta dietResp = new Dieta();
 
  public String URL = "http://localhost:11434/api/generate";
- public String MODEL = "gemma2:2b";
+ public String MODEL = "qwen2.5";
  private final Gson gson = new Gson();
 
      public String gerarTreino(String objetivo, ArrayList<String> listaDias) throws Exception {
@@ -88,7 +90,12 @@
                  sb2.append("É uma dieta para treinos. \n");
                  sb2.append("A dieta deve ser montada conforme os objetivos do usuário, que são: ").append(objetivo).append("\n\n");
                  sb2.append("REGRAS IMPORTANTE.\n");
-                 sb2.append("A dieta deve ser montada somente conforme os objetivos do usuário.");
+                 sb2.append("A dieta deve ser montada somente conforme os objetivos do usuário já fornecidos, que são: ").append(objetivo).append("\n\n");
+                 
+                  sb2.append("Para montar a dieta, aqui estão mais algumas informações do usuário: \n");
+                  sb2.append(dietResp.getDieta()).append("\n\n");
+                
+                 sb2.append("Com base nessas respostas, deve ser montada a dieta, de forma mais simples e de fácil entendimento para o usuário.");
                  sb2.append("Responda em português do Brasil.");
 
                  return sb2.toString();

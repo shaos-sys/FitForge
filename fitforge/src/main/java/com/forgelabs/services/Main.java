@@ -2,7 +2,8 @@
 
  import java.util.Scanner;
  import com.forgelabs.features.AgendaTreino;
- import com.forgelabs.features.Menu;
+import com.forgelabs.features.Dieta;
+import com.forgelabs.features.Menu;
 
  public class Main {
      public static void main(String[] args) {
@@ -11,6 +12,7 @@
      Menu m = new Menu();
      AgendaTreino agenda = new AgendaTreino();
      OllamaClient ollama = new OllamaClient();
+     Dieta dietaResp = new Dieta();
 
      int opcao = 0;   
      String objetivo = " ";
@@ -54,7 +56,7 @@
                 String treino = ollama.gerarTreino(objetivo, agenda.getListaDias());
                System.out.println(treino); 
                 
-               } catch (Exception e) {               
+               } catch (Exception e) {             
                System.out.println("Falha ao conectar com ollama.");
                System.out.println("Certifique-se que a conexação com Ollama 'Ollama serve' está rodando.");
                }
@@ -65,6 +67,7 @@
                break;
 
              case 4:
+             dietaResp.setPerguntasDieta(scan); 
              System.out.println("Gerando dieta...");
               try {
              System.out.println("====== DIETA ======"); 
