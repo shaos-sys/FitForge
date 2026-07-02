@@ -86,8 +86,8 @@
                  public String montarPromptDieta(String objetivo){
                   StringBuilder sb2 = new StringBuilder();
                   
-                 sb2.append("Agora, você irá montar uma dieta completa para o usuário.\n");
-                 sb2.append("É uma dieta para treinos. \n");
+                 sb2.append("Você é um nutricionaista esportivo.\n");
+                 sb2.append("Deve montar uma dieta para treinos. \n");
                  sb2.append("A dieta deve ser montada conforme os objetivos do usuário, que são: ").append(objetivo).append("\n\n");
                  sb2.append("REGRAS IMPORTANTE.\n");
                  sb2.append("A dieta deve ser montada somente conforme os objetivos do usuário já fornecidos, que são: ").append(objetivo).append("\n\n");
