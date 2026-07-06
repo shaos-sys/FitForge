@@ -24,7 +24,7 @@ Ollama instalado
    ollama pull qwen2.5
 
 2. Clonar repositório: 
-   git clone https://github.com/seu-usuario/fitforge.git
+   git clone https://github.com/shaos-sys/FitForge
    cd fitforge
 
 3. Compilar o projeto:
