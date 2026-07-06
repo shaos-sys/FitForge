@@ -6,20 +6,20 @@ Sistema desenvolvido em Java puro, sem uso de Frameworks. O usuário informa o s
 e dietas com base nas informações obtidas do usuário.
 
 ## 🚀 Tecnologias utilizadas
-
+```
 Java 21.
 Maven — para gerenciamento de dependências e build.
 Gson 2.14.0 — serialização e desserialização de JSON.
 Ollama (qwen2.5) — LLM local para gerar as recomendações.
-
+```
 ## 📋 Pré-requisitos
-
+```
 Java 17+
 Maven 3.6+
 Ollama instalado
-
+```
 ## ⚙️ Como rodar
-
+```
 1. Instalar o modelo da IA: 
    ollama pull qwen2.5
 
@@ -32,9 +32,9 @@ Ollama instalado
 
 4. Executar:
    java -jar target/fitforge-1.0-SNAPSHOT-jar-with-dependencies.jar
-
+```
 ## 🗂️ Estrutura do projeto
-
+```
 fitforge/
 ├── pom.xml
 ├── rodar.bat
@@ -46,24 +46,24 @@ fitforge/
         ├── Menu.java            — exibição dos menus
         ├── AgendaTreino.java    — gerenciamento dos dias de treino
         └── Dieta.java           — recomendação de dieta
-
+```
 ## 🎯 Funcionalidades
-
+```
 Informar objetivo de treino (ganhar massa, emagrecer, resistência...).
 Selecionar dias da semana disponíveis para treinar.
 Gerar recomendação de treino personalizada com IA.
 Gerar recomendação de dieta semanal com IA.
 Menu interativo no terminal.
-
+```
 ## 🧠 Conceitos aplicados
-
+```
 Integração de LLM local via API REST (HttpClient nativo do Java).
 Gerenciamento de dependências com Maven,
 Serialização e desserialização de JSON com Gson.
 ArrayList e laços de repetição para controle do menu.
 Estrutura condicional para validação.
 Separação de responsabilidades em pacotes (services e features).
-
+```
 ## 👨‍💻 Autor
 
 Desenvolvido por Hélio Souza como projeto pessoal para estudos, com foco em aprendizado de integrações de IA no Java puro.
